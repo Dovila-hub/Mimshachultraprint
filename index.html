@@ -43,7 +43,7 @@
     nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:70px;transition:box-shadow 0.3s,background 0.3s;}
     nav.scrolled{background:rgba(255,255,255,0.98);box-shadow:0 4px 32px rgba(0,0,0,0.08);}
     .logo{display:flex;align-items:center;text-decoration:none;}
-    .logo img{height:50px;width:auto;object-fit:contain;transition:transform 0.3s;}
+    .logo img{height:70px;width:auto;object-fit:contain;transition:transform 0.3s;}
     .logo:hover img{transform:scale(1.04);}
     .nav-links{display:flex;gap:28px;}
     .nav-links a{color:var(--muted);font-size:13px;text-decoration:none;transition:color 0.2s;position:relative;}
@@ -210,7 +210,7 @@
     footer{background:#111;color:rgba(255,255,255,0.6);padding:56px 40px 32px;}
     .footer-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);flex-wrap:wrap;gap:40px;}
     .footer-logo-wrap{display:flex;flex-direction:column;gap:14px;}
-    .footer-logo-img{height:44px;width:auto;filter:brightness(0) invert(1);opacity:0.85;transition:opacity 0.2s;}
+    .footer-logo-img{height:20px;width:auto;filter:brightness(0) invert(1);opacity:0.85;transition:opacity 0.2s;}
     .footer-logo-img:hover{opacity:1;}
     .footer-tagline{font-size:13px;color:rgba(255,255,255,0.4);font-weight:300;max-width:240px;line-height:1.7;}
     .footer-slogan{font-size:13px;color:var(--green-light);font-style:italic;}
@@ -280,7 +280,7 @@
   <!-- NAV -->
   <nav id="navbar">
     <a href="#" class="logo">
-      <img src="logo.png" alt="Mimshach UltraPrint"/>
+      <img src="images/logo.png" alt="Mimshach UltraPrint"/>
     </a>
     <div class="nav-links">
       <a href="#services" data-fr="Services" data-en="Services">Services</a>
@@ -468,29 +468,29 @@
       <div class="contact-info reveal-left">
         <div class="contact-row">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="c-label" data-fr="Adresse" data-en="Address">Adresse</div><div class="c-val">À compléter — Ville, Pays</div></div>
+          <div><div class="c-label" data-fr="Adresse" data-en="Address">Adresse</div><div class="c-val">Douala, Cameroun</div></div>
         </div>
         <div class="contact-row">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <div><div class="c-label" data-fr="Téléphone" data-en="Phone">Téléphone</div><div class="c-val">+00 000 000 000</div></div>
+          <div><div class="c-label" data-fr="Téléphone" data-en="Phone">Téléphone</div><div class="c-val">+237 693 480 114 / +237 677 753 409</div></div>
         </div>
         <div class="contact-row">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="c-label">Email</div><div class="c-val">contact@mimshachultraprint.com</div></div>
+          <div><div class="c-label">Email</div><div class="c-val">mimshachup@gmail.com</div></div>
         </div>
         <div class="contact-row">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
           <div><div class="c-label" data-fr="Réseaux sociaux" data-en="Social media">Réseaux sociaux</div><div class="c-val">@mimshachultraprint</div></div>
         </div>
       </div>
-      <form class="contact-form reveal-right" action="https://formspree.io/f/xjgpjbpj" method="POST">
+      <div class="contact-form reveal-right">
         <div class="form-row">
-          <input type="text" name="nom" data-placeholder-fr="Votre nom" data-placeholder-en="Your name" placeholder="Votre nom" required/>
-          <input type="text" name="société" data-placeholder-fr="Votre société" data-placeholder-en="Your company" placeholder="Votre société"/>
+          <input type="text" data-placeholder-fr="Votre nom" data-placeholder-en="Your name" placeholder="Votre nom"/>
+          <input type="text" data-placeholder-fr="Votre société" data-placeholder-en="Your company" placeholder="Votre société"/>
         </div>
-        <input type="email" name="email" data-placeholder-fr="Votre email" data-placeholder-en="Your email" placeholder="Votre email" required/>
-        <input type="tel" name="téléphone" data-placeholder-fr="Votre téléphone" data-placeholder-en="Your phone" placeholder="Votre téléphone"/>
-        <select name="service">
+        <input type="email" data-placeholder-fr="Votre email" data-placeholder-en="Your email" placeholder="Votre email"/>
+        <input type="tel" data-placeholder-fr="Votre téléphone" data-placeholder-en="Your phone" placeholder="Votre téléphone"/>
+        <select>
           <option data-fr="— Service concerné —" data-en="— Service needed —">— Service concerné —</option>
           <option data-fr="Impression" data-en="Printing">Impression</option>
           <option data-fr="Feux de signalisation" data-en="Traffic signals">Feux de signalisation</option>
@@ -500,11 +500,9 @@
           <option data-fr="Signalisation horizontale" data-en="Horizontal signage">Signalisation horizontale</option>
           <option data-fr="Autre" data-en="Other">Autre</option>
         </select>
-        <textarea name="message" data-placeholder-fr="Décrivez votre projet, quantités, délais..." data-placeholder-en="Describe your project, quantities, deadlines..." placeholder="Décrivez votre projet, quantités, délais..."></textarea>
-        <input type="hidden" name="_subject" value="Nouvelle demande de devis — Mimshach UltraPrint"/>
-        <input type="hidden" name="_language" value="fr"/>
-        <button type="submit" class="send-btn" data-fr="Envoyer la demande →" data-en="Send request →">Envoyer la demande →</button>
-      </form>
+        <textarea data-placeholder-fr="Décrivez votre projet, quantités, délais..." data-placeholder-en="Describe your project, quantities, deadlines..." placeholder="Décrivez votre projet, quantités, délais..."></textarea>
+        <button class="send-btn" data-fr="Envoyer la demande →" data-en="Send request →">Envoyer la demande →</button>
+      </div>
     </div>
   </section>
 
@@ -512,7 +510,7 @@
   <footer>
     <div class="footer-top">
       <div class="footer-logo-wrap">
-        <img src="logo.png" alt="Mimshach UltraPrint" class="footer-logo-img"/>
+        <img src="images/logo.png" alt="Mimshach UltraPrint" class="footer-logo-img"/>
         <p class="footer-tagline" data-fr="Votre partenaire multiservices pour l'impression, la signalisation et la confection." data-en="Your all-in-one partner for printing, signage and workwear.">Votre partenaire multiservices pour l'impression, la signalisation et la confection.</p>
         <span class="footer-slogan">We print your ideas!</span>
       </div>
@@ -534,7 +532,7 @@
         </div>
         <div class="footer-col">
           <h5 data-fr="Contact" data-en="Contact">Contact</h5>
-          <p>+00 000 000 000<br>contact@mimshachultraprint.com<br>Ville, Pays</p>
+          <p>+237 693 480 114 / +237 677 753 409<br>mimshachup@gmail.com<br>Douala, Cameroun</p>
         </div>
       </div>
     </div>
