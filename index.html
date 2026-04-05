@@ -483,26 +483,27 @@
           <div><div class="c-label" data-fr="Réseaux sociaux" data-en="Social media">Réseaux sociaux</div><div class="c-val">@mimshachultraprint</div></div>
         </div>
       </div>
-      <div class="contact-form reveal-right">
+      <form class="contact-form reveal-right" action="https://formspree.io/f/xjgpjbpj" method="POST">
         <div class="form-row">
-          <input type="text" data-placeholder-fr="Votre nom" data-placeholder-en="Your name" placeholder="Votre nom"/>
-          <input type="text" data-placeholder-fr="Votre société" data-placeholder-en="Your company" placeholder="Votre société"/>
+          <input type="text" name="nom" data-placeholder-fr="Votre nom" data-placeholder-en="Your name" placeholder="Votre nom" required/>
+          <input type="text" name="societe" data-placeholder-fr="Votre société" data-placeholder-en="Your company" placeholder="Votre société"/>
         </div>
-        <input type="email" data-placeholder-fr="Votre email" data-placeholder-en="Your email" placeholder="Votre email"/>
-        <input type="tel" data-placeholder-fr="Votre téléphone" data-placeholder-en="Your phone" placeholder="Votre téléphone"/>
-        <select>
-          <option data-fr="— Service concerné —" data-en="— Service needed —">— Service concerné —</option>
-          <option data-fr="Impression" data-en="Printing">Impression</option>
-          <option data-fr="Feux de signalisation" data-en="Traffic signals">Feux de signalisation</option>
-          <option data-fr="Confection de tenues" data-en="Workwear">Confection de tenues</option>
-          <option data-fr="Tableaux statistiques" data-en="Statistical boards">Tableaux statistiques</option>
-          <option data-fr="Signalisation verticale" data-en="Vertical signage">Signalisation verticale</option>
-          <option data-fr="Signalisation horizontale" data-en="Horizontal signage">Signalisation horizontale</option>
-          <option data-fr="Autre" data-en="Other">Autre</option>
+        <input type="email" name="email" data-placeholder-fr="Votre email" data-placeholder-en="Your email" placeholder="Votre email" required/>
+        <input type="tel" name="telephone" data-placeholder-fr="Votre téléphone" data-placeholder-en="Your phone" placeholder="Votre téléphone"/>
+        <select name="service">
+          <option>— Service concerné —</option>
+          <option>Impression</option>
+          <option>Feux de signalisation</option>
+          <option>Confection de tenues</option>
+          <option>Tableaux statistiques</option>
+          <option>Signalisation verticale</option>
+          <option>Signalisation horizontale</option>
+          <option>Autre</option>
         </select>
-        <textarea data-placeholder-fr="Décrivez votre projet, quantités, délais..." data-placeholder-en="Describe your project, quantities, deadlines..." placeholder="Décrivez votre projet, quantités, délais..."></textarea>
-        <button class="send-btn" data-fr="Envoyer la demande →" data-en="Send request →">Envoyer la demande →</button>
-      </div>
+        <textarea name="message" placeholder="Décrivez votre projet, quantités, délais..."></textarea>
+        <input type="hidden" name="_subject" value="Nouvelle demande de devis — Mimshach UltraPrint"/>
+        <button type="submit" class="send-btn">Envoyer la demande →</button>
+      </form>
     </div>
   </section>
 
@@ -620,17 +621,6 @@
         const t = document.querySelector(a.getAttribute('href'));
         if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
       });
-    });
-
-    /* ── SEND BTN ── */
-    document.querySelector('.send-btn').addEventListener('click', () => {
-      const btn = document.querySelector('.send-btn');
-      btn.textContent = lang === 'fr' ? '✓ Message envoyé !' : '✓ Message sent!';
-      btn.style.background = '#2d8a29';
-      setTimeout(() => {
-        btn.textContent = lang === 'fr' ? 'Envoyer la demande →' : 'Send request →';
-        btn.style.background = '';
-      }, 3000);
     });
   </script>
 </body>
